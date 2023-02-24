@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+}
+
+
+nav 
+{
+    margin: auto;
+    width: 100%;
+    height: 100px;
+    background: #48435C;
+}
+nav .icon {
+    float: left;
+    position: absolute  ;
+    top: 50px;
+    left: 50px;
+    color: blanchedalmond;
+}
+
+nav .main_pages 
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+ 
+nav .main_pages a 
+{
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    color: white;
+    padding-right: 15px;
+    z-index: 5;
+}
+ 
+nav a:hover 
+{
+    background: #5A5766
+}
+
+.main-image {
+    width: 100%;
+    margin-top: 100px;
+}
+
+label, #toggle
+{
+    display: none;
+}
+ 
+@media all and (max-width: 991px)
+{
+    nav
+    {
+        position: relative;
+        height: 60px;
+        z-index: 2;
+    }
+
+    nav .icon {
+        float: left;
+        position: absolute  ;
+        top: 25px;
+        left: 25px;
+    }
+ 
+    nav .main_pages 
+    {
+        display: none;
+        flex-direction: column;
+        background: #48435C;
+        height: 220px;
+        z-index: 2;
+    }
+ 
+    nav .main_pages a {
+        width: 50%;
+    }
+ 
+    label 
+    {
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+    #toggle:checked + .main_pages {
+        display: flex;
+
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr) 100px;
+        z-index: 1;
+      
+    }
+
+    .main_img {
+        grid-column: 1 ;
+        grid-row: 1/1;
+    }
+    .main_img img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 25px;
+    }
+   .main_img h2 {
+        text-align: center;
+        vertical-align: bottom;
+    } 
+
+    .second_img {
+        grid-column: 1;
+        grid-row: 2/4;
+        margin-top: 25px;
+        
+    }
+    .second_img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .priere {
+        border: 3px solid black;
+        border-radius: 15px;
+        margin: 5px;
+        padding: 3px;
+        
+    }
+    .repentance {
+        border: 3px solid black;
+        border-radius: 15px;
+        margin: 5px;
+        padding: 3px;
+        
+    }
+    .footer {
+        grid-column: 1;
+        grid-row: 4/4;
+        background-color: #48435C;
+    }
+}
